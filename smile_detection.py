@@ -13,11 +13,10 @@ smiles = smile_detector.detectMultiScale(
     minNeighbors=35
 )
 
-# Draw rectangles around smiles
+# draw rectangles around smiles
 for (x, y, w, h) in smiles:
     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 255), 2)
 
-# Show image
 cv2.imshow("Smile Detection", img)
 
 cv2.waitKey(0)
