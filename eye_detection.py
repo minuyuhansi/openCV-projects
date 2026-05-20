@@ -16,18 +16,10 @@ eyes = eye_detector.detectMultiScale(
 for (x, y, w, h) in eyes:
 
     center = (x + w // 2, y + h // 2)
-
     axes = (w // 2, h // 5)
 
-    cv2.ellipse(
-        img,
-        center,
-        axes,
-        0,
-        0,
-        360,
-        (0, 255, 0),
-        2
+    cv2.ellipse(img,center,axes,0,0,360,
+        (0, 255, 0),2
     )
 
 cv2.imshow("Eye Detection", img)
